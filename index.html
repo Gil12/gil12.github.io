@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gilly Works</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+    #cover{
+      position: absolute;
+      size: 284px 105px;
+      top: -40%;
+      left: 142px;
+    }
+    #fish{
+      position: absolute;
+      size: 20px 20px;
+      top: 30%;
+      left: 130%;
+
+    }
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default" style="background-color:#D0D0D0" >
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html"><img src="img/fishLogoSquare.jpg" alt="Icon" class="img-responsive" style ="max-width: 75px;maxHeight:75px"></img></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+          <ul class="nav navbar-nav">
+            <li ><a href="index.html" >Home </a></li>
+            <li><a href="gillyWorksAbout.html" >About Us</a></li>
+            <li><a href="gillyWorksGames.html ">Games</a></li>
+            <!--<li><a href="gillyWorksContact.html ">Contact Us</a></li>-->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <big><ul style="list-style: none; text-align: center;">
+    <a href="mailto:works.gilly@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>  works.gilly@gmail.com</a> | 
+    <a href="https://www.facebook.com/works.gilly/"><i class="fa fa-facebook-square" aria-hidden="true"></i>  facebook.com/works.gilly</a> | 
+    <a href="https://itunes.apple.com/us/developer/gilbert-anwar/id886919894"><i class="fa fa-apple" aria-hidden="true"></i> iOS Games</a> | 
+    <a href="https://play.google.com/store/apps/developer?id=Gilly+Works"><i class="fa fa-android" aria-hidden="true"></i> Android Games</a> 
+    <!-- <i class="fa fa-globe" aria-hidden="true"></i> -->
+    </ul></big>
+    <center>
+    <div class="polaroid">
+    <center><h2>Gilly Works aims at creating user-friendly, fun and entertaining apps for iOS and Android. :)</h2></center>
+    </div>
+    </center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+<img src="img/GillyWorksCover.png" id="cover">
+<img src="img/fishLogoSquareBlank.png" id="fish">
+<script type="text/javascript">
+  // grab our soccer ball as a js variable
+  var cover = document.getElementById('cover');
+  var fish= document.getElementById('fish');
+  // Use the TweenMax Object TO method to animate over 3 seconds
+  //TweenMax.to(element(s) to animate, length of animation (seconds), {options object})
+  //TweenMax.to( sb, 3, {left:800, top:300} );
+  TweenMax.to(cover, 1, {left:'50%', top:'70%',
+        xPercent:'-50', yPercent:'-50', scale:1.2, ease: Power1.easeIn, delay:1});
+
+  //grab the array of elements with the same class while animating, we need a 4th parameter for the interval between triggering each animation
+  TweenMax.to('fish', 3, {left:'50%', top:'70%',
+        xPercent:'-50', yPercent:'-50', rotation: 360, delay:1, ease:Bounce.easeOut});
+
+  //TweenMax.to('.bball, #sb', 1, {opacity: 0, delay:7, onComplete: imDone});
+  // This is our custom callback function that gets fired via onComplete event listener
+  //TweenMax.to(fish, 3, {scale:0.2 delay:1});
+  TweenMax.to(fish, 3, {left:'-30%', top:'30%',
+        ease: SlowMo.ease.config(0.7, 0.7, false), delay:2,onComplete:imDone });
+  // This is our custom callback function that gets fired via onComplete event listener
+  function imDone () {
+    TweenMax.to(fish, 0, {left:'130%', top:'30%',delay:0});
+    var randomNumber = Math.floor(Math.random() * 5);
+    if(randomNumber==0)
+    {
+    TweenMax.to(fish, 5, {left:'-30%', top:'30%',
+        ease: SlowMo.ease.config(0.7, 0.7, false), delay:1,onComplete:imDone});
+    }
+    else if(randomNumber==3)
+    {
+        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
+        ease:  Power4.easeOut, delay:1, onComplete:imDone});
+        
+    }
+    else if(randomNumber==4){
+        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
+        ease:  Sine.easeOut, delay:1, onComplete:imDone});
+    }
+    else if(randomNumber==1){
+        
+        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
+        ease: Circ.easeOut, delay:1, onComplete:imDone});
+    }
+    else if(randomNumber==2){
+        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
+        ease: Expo.easeOut, delay:1, onComplete:imDone});
+    }
+    /*if(randomNumber==1)
+    TweenMax.to(fish, 5, {left:'-30%', top:'30%',
+        ease: SlowMo.ease.config(0.7, 0.7, false), delay:1});
+    else if(randomNumber==2)
+    {
+        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
+        ease: Circ.easeOut, delay:1});
+    }*/
+  }
+  
+
+</script>
+
+</body>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+<script
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</html>
