@@ -1,178 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Gilly Works</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/grid.css">
+    <title>Gilly Works - Game Development Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <style type="text/css">
-    #cover{
-      position: absolute;
-      size: 284px 105px;
-      top: -40%;
-      left: 142px;
-    }
-    #fish{
-      position: absolute;
-      size: 20px 20px;
-      top: 30%;
-      left: 130%;
-
-    }
-
-  </style>
-
-  <!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '662076373995804'); // Insert your pixel ID here.
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=662076373995804&ev=PageView&noscript=1"
-/></noscript>
-<!-- DO NOT MODIFY -->
-<!-- End Facebook Pixel Code -->
-
-
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<script>
-fbq('track', 'Search');
-</script>
-<body>
-<nav class="navbar navbar-default" style="background-color:#D0D0D0" >
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="index.html"><img src="img/fishLogoSquare.jpg" alt="Icon" class="img-responsive" style ="max-width: 75px;maxHeight:75px"></img></a>
+<body class="wave-bg min-h-screen">
+    <header class="fixed w-full top-0 bg-white/80 backdrop-blur-md shadow-md z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                    <img src="img/logo.png" alt="Gilly Works Logo" class="w-10 h-10">
+                    Gilly Works
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="#games" class="text-gray-600 hover:text-gray-900">Games</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24 pb-16">
+        <section id="home" class="min-h-screen flex items-center justify-center">
+            <div class="text-center">
+                <div class="logo-container mb-8">
+                    <img src="img/logo.png" alt="Gilly Works Logo" class="mx-auto">
+                </div>
+                <h1 class="text-5xl font-bold text-gray-900 mb-6">Welcome to Gilly Works</h1>
+                <p class="text-xl text-gray-600 mb-8">Creating Digital Experiences</p>
+                <div class="flex justify-center gap-4">
+                    <a href="#featured" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        See What's New
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="py-20">
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-8 p-8">
+                        <div class="space-y-6">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">New Release</span>
+                            <h2 class="text-4xl font-bold text-gray-900">Cook.it</h2>
+                            <p class="text-xl text-gray-600">Turn your fridge into dinner! Take a photo of your ingredients and get instant, AI-powered recipe ideas.</p>
+                            
+                            <div class="space-y-4">
+                                <h3 class="text-lg font-semibold text-gray-800">Key Features:</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Instant Recipe Suggestions - Just snap a photo of your fridge or pantry</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Smart Dietary Matching - Perfect for various dietary preferences</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Cuisine Preferences - Choose from Asian, Italian, Low-Carb, and more</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Waste Reduction - Get smart suggestions to use what you already have</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="pt-4">
+                                <a href="https://apps.apple.com/ke/app/cook-it/id6741380482" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
+                                    <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+                                    </svg>
+                                    Download on the App Store
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <img src="img/cook-it-ss.png" alt="Cook.it App Screenshot" class="rounded-lg shadow-lg max-w-[60%]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Games</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="https://apps.apple.com/ke/app/gilly-connect/id886919891" class="block group">
+                    <div class="game-card p-6 transition-transform duration-300 group-hover:scale-105">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="img/gillyConnectIcon.png" alt="Gilly Connect Icon" class="w-16 h-16 rounded-xl">
+                            <h3 class="text-xl font-bold">Gilly Connect</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">A multi-directional version of Connect Four with online multiplayer</p>
+                        <div class="flex gap-2">
+                            <span class="text-blue-600 group-hover:text-blue-800">
+                                <i class="fab fa-app-store-ios text-2xl"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://apps.apple.com/ke/app/color-drift/id1139572518" class="block group">
+                    <div class="game-card p-6 transition-transform duration-300 group-hover:scale-105">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="img/colorDriftIcon.png" alt="Color Drift Icon" class="w-16 h-16 rounded-xl">
+                            <h3 class="text-xl font-bold">Color Drift</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">An addicting, color-based reaction game testing reflexes and perception</p>
+                        <div class="flex gap-2">
+                            <span class="text-blue-600 group-hover:text-blue-800">
+                                <i class="fab fa-app-store-ios text-2xl"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://apps.apple.com/ke/app/element-hockey/id1175892583" class="block group">
+                    <div class="game-card p-6 transition-transform duration-300 group-hover:scale-105">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="img/elementHockeyIcon.png" alt="Element Hockey Icon" class="w-16 h-16 rounded-xl">
+                            <h3 class="text-xl font-bold">Element Hockey</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Experience the thrill of hockey with a unique elemental twist</p>
+                        <div class="flex gap-2">
+                            <span class="text-blue-600 group-hover:text-blue-800">
+                                <i class="fab fa-app-store-ios text-2xl"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-12">Connect With Us</h2>
+            <div class="flex justify-center gap-8 text-4xl">
+                <a href="https://www.facebook.com/works.gilly/" class="text-blue-600 hover:text-blue-800 transition-colors">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://apps.apple.com/ke/developer/gilbert-anwar/id886919894" class="text-gray-800 hover:text-gray-600 transition-colors">
+                    <i class="fab fa-app-store-ios"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white/80 backdrop-blur-md shadow-inner">
+        <div class="container mx-auto px-6 py-4">
+            <p class="text-center text-gray-600">
+                © 2024 Gilly Works. All rights reserved. | 
+                <a href="privacy-policy.html" class="text-blue-600 hover:text-blue-800">Cook.it Privacy Policy</a>
+            </p>
         </div>
+    </footer>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
-          <ul class="nav navbar-nav">
-            <li ><a href="index.html" >Home </a></li>
-            <li><a href="gillyWorksAbout.html" >About Us</a></li>
-            <li><a href="gillyWorksGames.html ">Games</a></li>
-            <!--<li><a href="gillyWorksContact.html ">Contact Us</a></li>-->
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-
-    <big><ul style="list-style: none; text-align: center;">
-    <a href="mailto:works.gilly@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>  works.gilly@gmail.com</a> | 
-    <a href="https://www.facebook.com/works.gilly/"><i class="fa fa-facebook-square" aria-hidden="true"></i>  facebook.com/works.gilly</a> | 
-    <a href="https://itunes.apple.com/us/developer/gilbert-anwar/id886919894"><i class="fa fa-apple" aria-hidden="true"></i> iOS Games</a> | 
-    <a href="https://play.google.com/store/apps/developer?id=Gilly+Works"><i class="fa fa-android" aria-hidden="true"></i> Android Games</a> 
-    <!-- <i class="fa fa-globe" aria-hidden="true"></i> -->
-    </ul></big>
-    <center>
-    <div class="polaroid">
-    <center><h2>Not the official Gilly Works website :)</h2></center>
-    <center><h6>WebDev 2017</h6></center>
-    </div>
-    </center>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-
-<img src="img/GillyWorksCover.png" id="cover">
-<img src="img/fishLogoSquareBlank.png" id="fish">
-<script type="text/javascript">
-  // grab our soccer ball as a js variable
-  var cover = document.getElementById('cover');
-  var fish= document.getElementById('fish');
-  // Use the TweenMax Object TO method to animate over 3 seconds
-  //TweenMax.to(element(s) to animate, length of animation (seconds), {options object})
-  //TweenMax.to( sb, 3, {left:800, top:300} );
-  TweenMax.to(cover, 1, {left:'50%', top:'70%',
-        xPercent:'-50', yPercent:'-50', scale:1.2, ease: Power1.easeIn, delay:1});
-
-  //grab the array of elements with the same class while animating, we need a 4th parameter for the interval between triggering each animation
-  TweenMax.to('fish', 3, {left:'50%', top:'70%',
-        xPercent:'-50', yPercent:'-50', rotation: 360, delay:1, ease:Bounce.easeOut});
-
-  //TweenMax.to('.bball, #sb', 1, {opacity: 0, delay:7, onComplete: imDone});
-  // This is our custom callback function that gets fired via onComplete event listener
-  //TweenMax.to(fish, 3, {scale:0.2 delay:1});
-  TweenMax.to(fish, 3, {left:'-30%', top:'30%',
-        ease: SlowMo.ease.config(0.7, 0.7, false), delay:2,onComplete:imDone });
-  // This is our custom callback function that gets fired via onComplete event listener
-  function imDone () {
-    TweenMax.to(fish, 0, {left:'130%', top:'30%',delay:0});
-    var randomNumber = Math.floor(Math.random() * 5);
-    if(randomNumber==0)
-    {
-    TweenMax.to(fish, 5, {left:'-30%', top:'30%',
-        ease: SlowMo.ease.config(0.7, 0.7, false), delay:1,onComplete:imDone});
-    }
-    else if(randomNumber==3)
-    {
-        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
-        ease:  Power4.easeOut, delay:1, onComplete:imDone});
-        
-    }
-    else if(randomNumber==4){
-        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
-        ease:  Sine.easeOut, delay:1, onComplete:imDone});
-    }
-    else if(randomNumber==1){
-        
-        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
-        ease: Circ.easeOut, delay:1, onComplete:imDone});
-    }
-    else if(randomNumber==2){
-        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
-        ease: Expo.easeOut, delay:1, onComplete:imDone});
-    }
-    /*if(randomNumber==1)
-    TweenMax.to(fish, 5, {left:'-30%', top:'30%',
-        ease: SlowMo.ease.config(0.7, 0.7, false), delay:1});
-    else if(randomNumber==2)
-    {
-        TweenMax.to(fish, 5, {left:'-30%', top:'30%',
-        ease: Circ.easeOut, delay:1});
-    }*/
-  }
-  
-
-</script>
-
+    <script src="js/main.js"></script>
 </body>
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-
-<script
-  src="http://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-</html>
+</html> 
